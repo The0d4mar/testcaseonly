@@ -26,6 +26,7 @@ export const Container = styled.section`
 `;
 
 export const LineHorizontal = styled.div`
+
   position: absolute;
   top: 0;
   left: 50%;
@@ -37,6 +38,7 @@ export const LineHorizontal = styled.div`
 `
 
 export const LineVertical = styled.div`
+
   position: absolute; top: 40%; left: 0;
   background-color: ${({ theme }) => theme.color.lineColor};
   width: 100%;
@@ -46,6 +48,7 @@ export const LineVertical = styled.div`
 `
 
 export const Header = styled.header`
+
   box-sizing: border-box;
   position: relative;
   color: ${({ theme }) => theme.color.textPrimary};
@@ -102,6 +105,7 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.section`
+
   color: ${({ theme }) => theme.color.textSecondary};
   display: flex;
   justify-content: space-evenly;
@@ -199,6 +203,7 @@ export const BtnBlock = styled.div`
   gap: 16px;
 
   ${({ theme }) => theme.media.up('lg')} { gap: 8.33px; }
+
 `;
 
 export const BtnDate = styled.button`
@@ -212,6 +217,7 @@ export const BtnDate = styled.button`
 
   ${({ theme }) => theme.media.up('md')} { width: 36px; }
   ${({ theme }) => theme.media.up('lg')} { width: 50px; }
+  cursor: pointer;
 `;
 
 export const CircleItemComp = styled.div<{ $active?: boolean }>`
@@ -427,13 +433,11 @@ export const CardBody = styled.div`
     line-height: ${({ theme }) => theme.font.size.text.xxl.lineHeight};
     letter-spacing: ${({ theme }) => theme.font.size.text.xxl.letterSpacing};
   }
-
-  /* если текста много — пусть прокручивается внутри карточки,
-     высота карточки при этом не прыгает */
   overflow: hidden;
 `;
 
 export const NavButtonBase = styled.button`
+
   position: absolute;
   top: 70%;
   transform: translateY(-50%);
@@ -442,7 +446,7 @@ export const NavButtonBase = styled.button`
   border-radius: 50%;
   width: 32px;
   aspect-ratio: 1/1;
-  box-shadow: 0 0 15px 0 ${({theme}) => theme.color.blueColor};
+  box-shadow: 0 0 15px 0 #3878ee5a;
   display: flex; align-items: center; justify-content: center;
   font-size: 18px;
   line-height: 1;

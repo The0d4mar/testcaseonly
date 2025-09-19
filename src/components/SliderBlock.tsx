@@ -14,19 +14,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 type Slide = { id: string | number; title: string; text: string };
 type Props = { outerslides: Slide[]; step?: number; chosenDate: DateEnum; setChosenDate: (newDate: DateEnum) => void; };
 
-/* ===== ВАЖНО: вынесено за компонент ===== */
+
 const StyledSwiper = styled(SwiperReact)`
   background: transparent;
   padding: 0;
   width: 100%;
   .swiper-wrapper { align-items: stretch; }
 
-  /* приглушение всех, кроме активного */
+
   .swiper-slide { opacity: 1; transition: opacity .25s ease; }
   .swiper-slide-next { opacity: 1; }
   .swiper-slide-active { opacity: 1; }
 
-  /* блеклость только до md включительно */
+
   @media (max-width: 768px) {
     .swiper-slide { opacity: .35; transition: opacity .25s ease; }
     .swiper-slide-next { opacity: .55; }
@@ -52,7 +52,7 @@ const SWIPER_BREAKPOINTS = {
   1440: { slidesPerView: 3,    spaceBetween: 80 },
   1980: { slidesPerView: 3,    spaceBetween: 80 },
 };
-/* ======================================= */
+
 
 const SliderBlock: React.FC<Props> = ({ outerslides, step = 1, chosenDate, setChosenDate }) => {
   const [slides, setSlides] = useState<Slide[]>(outerslides)
@@ -167,10 +167,10 @@ const SliderBlock: React.FC<Props> = ({ outerslides, step = 1, chosenDate, setCh
         >
         {slides.map((s) => (
           <StyledSlide key={s.id}>
-            <Card className="js-slide-card">
-              <CardTitle className="js-slide-title">{s.title}</CardTitle>
+            <Card>
+              <CardTitle >{s.title}</CardTitle>
               <Gap />
-              <CardBody className="js-slide-body">{s.text}</CardBody>
+              <CardBody>{s.text}</CardBody>
             </Card>
           </StyledSlide>
         ))}

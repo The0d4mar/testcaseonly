@@ -1,9 +1,8 @@
 import React, {FC} from 'react';
 import { DateEnum } from '../interface/interface';
-import classes from './DateBlock.module.css'
 import { BtnBlock, BtnDate, ChosenDateBlock, DateBlockBtns } from '../styles/components';
-import ChevronLeft from '../img/Vector 2.png'
-import ChevronRight from '../img/VectorRight.png'
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 
 interface DateBlockProps{
     chosenDate: DateEnum;
@@ -31,8 +30,8 @@ const DateBlock:FC<DateBlockProps> = ({chosenDate, setChosenDate}) => {
         
         <ChosenDateBlock>{chosenDate}</ChosenDateBlock>
         <BtnBlock>
-            <BtnDate onClick={e => goNext()}><img src={ChevronLeft} alt="Previous" /></BtnDate>
-            <BtnDate onClick={e => goPrev()}><img src={ChevronRight} alt="Next" /></BtnDate>
+            <BtnDate onClick={e => goNext()}><ChevronLeft size={16} color="#42567A"/></BtnDate>
+            <BtnDate onClick={e => goPrev()}><ChevronRight size={16} color="#42567A"/></BtnDate>
         </BtnBlock>
       
     </DateBlockBtns>

@@ -19,8 +19,6 @@ const shortestRotationTo = (current: number, target: number) =>
 const TARGET_ANGLE_DEG = -60; 
 const INITIAL_ACTIVE = 0;
 const DURATION = 2;
-const PRE_DELAY = 0;
-const POST_DELAY = 0;
 
 const RingDial: React.FC<RingDialProps> = ({ items, onChangeActive, externalActive = 0 }) => {
   const count = items.length;
@@ -178,7 +176,7 @@ const RingDial: React.FC<RingDialProps> = ({ items, onChangeActive, externalActi
                   CircleNum={num}
                   chapter={word}
                   isActive={isActive}
-                  showTitle={isActive && !animating}  // <— тайтл только активному и после анимации
+                  showTitle={isActive && !animating}
                 />
               </DotInner>
             </DotWrapper>
