@@ -16,7 +16,7 @@ interface TitleBlockProps {
 const TitleBlock: FC<TitleBlockProps> = ({
   choosenYearPeriod,
   animatePeriod,
-  speed = 15, //скорость воспроизведния анимации
+  speed = 15,
 }) => {
   const leftRef = useRef<HTMLSpanElement>(null);
   const rightRef = useRef<HTMLSpanElement>(null);
